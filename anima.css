@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    border: 4px solid white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ball {
+    width: 60px;
+    height: 60px;
+    background: crimson;
+    border-radius: 50%;
+    position: absolute;
+    left: 220px;
+    bottom: 0;
+    animation: bounce 1s infinite alternate ease-in-out;
+}
+
+@keyframes slide {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 440px;
+    }
+}
