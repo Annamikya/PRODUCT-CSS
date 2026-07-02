@@ -87,7 +87,7 @@ button {
     border-radius: 999px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    animation: pulseButton 2s infinite;
+    animation: blinkButton 1.2s infinite;
 }
 
 button:hover {
@@ -110,7 +110,13 @@ button:hover {
     }
 }
 
-@keyframes pulseButton {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+@keyframes blinkButton {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: scale(1.05);
+    }
 }
