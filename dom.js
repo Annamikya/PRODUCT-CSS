@@ -1,2 +1,2 @@
-let element = document.getElementById("new");
-console.log(element);
+let divs= document.querySelectorAll('.box');
+divs[0].innerText="unique div" ;
