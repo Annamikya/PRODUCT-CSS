@@ -86,19 +86,51 @@
 // setTimeout(()=>{
 //   console.log("Timer Deactivated.....");
 // },2000);
-setTimeout(()=>{
-  console.log("Step 1: Task uncomplete....");
-  setTimeout(()=>{
-    console.log("Step 2: Task uncomplete.....");
-    setTimeout(()=>{
-      console.log("Step 3: Task uncomplete.....");
-      setTimeout(()=>{
-        console.log("Step 4: Task uncomplete.....");
-      },9000)
-    },6000)
-  },3000)
-},1000);
-
+// setTimeout(()=>{
+//   console.log("Step 1: Task uncomplete....");
+//   setTimeout(()=>{
+//     console.log("Step 2: Task uncomplete.....");
+//     setTimeout(()=>{
+//       console.log("Step 3: Task uncomplete.....");
+//       setTimeout(()=>{
+//         console.log("Step 4: Task uncomplete.....");
+//       },9000)
+//     },6000)
+//   },3000)
+// },1000);
 
  
 
+function foodDeliveryProcess(callback) {
+  console.log("recieved");
+  
+  setTimeout(() => {
+    console.log(" Step 1: Order Received ");
+    
+    
+    setTimeout(() => {
+      console.log(" Step 2: Restaurant Preparing Food ");
+      
+      
+      setTimeout(() => {
+        console.log("Step 3: Food Packed ");
+        
+        
+        setTimeout(() => {
+          console.log(" Step 4: Delivery Partner Picked Up ");
+          
+          
+          setTimeout(() => {
+            console.log(" Step 5: Food Delivered ");
+            
+          }, 2000);
+        }, 2000);
+      }, 2000);
+    }, 2000);
+  }, 2000);
+};
+
+
+foodDeliveryProcess(function(message) {
+  console.log("order successfull");
+});
