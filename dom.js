@@ -101,36 +101,80 @@
 
  
 
-function foodDeliveryProcess(callback) {
-  console.log("recieved");
+// function foodDeliveryProcess(callback) {
+//   console.log("recieved");
   
-  setTimeout(() => {
-    console.log(" Step 1: Order Received ");
+//   setTimeout(() => {
+//     console.log(" Step 1: Order Received ");
     
     
-    setTimeout(() => {
-      console.log(" Step 2: Restaurant Preparing Food ");
+//     setTimeout(() => {
+//       console.log(" Step 2: Restaurant Preparing Food ");
       
       
-      setTimeout(() => {
-        console.log("Step 3: Food Packed ");
+//       setTimeout(() => {
+//         console.log("Step 3: Food Packed ");
         
         
-        setTimeout(() => {
-          console.log(" Step 4: Delivery Partner Picked Up ");
+//         setTimeout(() => {
+//           console.log(" Step 4: Delivery Partner Picked Up ");
           
           
-          setTimeout(() => {
-            console.log(" Step 5: Food Delivered ");
+//           setTimeout(() => {
+//             console.log(" Step 5: Food Delivered ");
             
-          }, 2000);
-        }, 2000);
-      }, 2000);
+//           }, 2000);
+//         }, 2000);
+//       }, 2000);
+//     }, 2000);
+//   }, 2000);
+// };
+
+
+// foodDeliveryProcess(function(message) {
+//   console.log("order successfull");
+// });
+function orderReceived(callback) {
+    setTimeout(() => {
+        console.log(" Order Received");
+        callback();
     }, 2000);
-  }, 2000);
-};
+}
+
+function restaurantPreparingFood(callback) {
+    setTimeout(() => {
+        console.log(" Restaurant is Preparing Food");
+        callback();
+    }, 2000);
+}
+
+function foodPacked(callback) {
+    setTimeout(() => {
+        console.log(" Food Packed");
+        callback();
+    }, 2000);
+}
+
+function deliveryPartnerPickedUp(callback) {
+    setTimeout(() => {
+        console.log(" Delivery Partner Picked Up the Food");
+        callback();
+    }, 2000);
+}
+
+function foodDelivered() {
+    setTimeout(() => {
+        console.log(" Food Delivered");
+    }, 2000);
+}
 
 
-foodDeliveryProcess(function(message) {
-  console.log("order successfull");
+orderReceived(function () {
+    restaurantPreparingFood(function () {
+        foodPacked(function () {
+            deliveryPartnerPickedUp(function () {
+                foodDelivered();
+            });
+        });
+    });
 });
