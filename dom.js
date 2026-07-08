@@ -134,47 +134,188 @@
 // foodDeliveryProcess(function(message) {
 //   console.log("order successfull");
 // });
-function orderReceived(callback) {
-    setTimeout(() => {
-        console.log(" Order Received");
-        callback();
-    }, 2000);
-}
+// function orderReceived(callback) {
+//     setTimeout(() => {
+//         console.log(" Order Received");
+//         callback();
+//     }, 2000);
+// }
 
-function restaurantPreparingFood(callback) {
-    setTimeout(() => {
-        console.log(" Restaurant is Preparing Food");
-        callback();
-    }, 2000);
-}
+// function restaurantPreparingFood(callback) {
+//     setTimeout(() => {
+//         console.log(" Restaurant is Preparing Food");
+//         callback();
+//     }, 2000);
+// }
 
-function foodPacked(callback) {
-    setTimeout(() => {
-        console.log(" Food Packed");
-        callback();
-    }, 2000);
-}
+// function foodPacked(callback) {
+//     setTimeout(() => {
+//         console.log(" Food Packed");
+//         callback();
+//     }, 2000);
+// }
 
-function deliveryPartnerPickedUp(callback) {
-    setTimeout(() => {
-        console.log(" Delivery Partner Picked Up the Food");
-        callback();
-    }, 2000);
-}
+// function deliveryPartnerPickedUp(callback) {
+//     setTimeout(() => {
+//         console.log(" Delivery Partner Picked Up the Food");
+//         callback();
+//     }, 2000);
+// }
 
-function foodDelivered() {
-    setTimeout(() => {
-        console.log(" Food Delivered");
-    }, 2000);
-}
+// function foodDelivered() {
+//     setTimeout(() => {
+//         console.log(" Food Delivered");
+//     }, 2000);
+// }
 
 
-orderReceived(function () {
-    restaurantPreparingFood(function () {
-        foodPacked(function () {
-            deliveryPartnerPickedUp(function () {
-                foodDelivered();
-            });
-        });
-    });
-});
+// orderReceived(function () {
+//     restaurantPreparingFood(function () {
+//         foodPacked(function () {
+//             deliveryPartnerPickedUp(function () {
+//                 foodDelivered();
+//             });
+//         });
+//     });
+// });
+
+//  
+
+//  console.log("hello");
+//  setTimeout(()=>{
+//   console.log("hi");
+//  },4000);
+//  console.log("three");
+// const hello = ()=>{
+//   console.log("hello");
+// }
+// setTimeout(hello,3000);
+// function getData(dataId,getNextData){
+//   setTimeout(()=>{
+//     console.log("data",dataId);
+//     if (getNextData){
+//       getNextData();
+  
+
+//     }
+//   },2000);
+// }
+//CALLBACK HELL
+// getData(1,()=>{
+//   getData(2,()=>{
+//     getData(3);
+//   });
+// });
+
+// let promise = new Promise((resolve,reject)=>{
+//   console.log("i am promise");
+//   reject("error");
+// } )
+
+// function getData(dataId,getNextData){
+//   return new Promise((resolve,reject)=>{
+//      setTimeout(()=>{
+//     console.log("data",dataId);
+//     resolve("success");
+//     if (getNextData){
+//       getNextData();
+  
+
+//     }
+//   },2000);
+// });
+// }
+
+
+//PROMISE CHAIN
+// getData(1)
+//   .then((res)=>{
+//     //console.log("getting data 1....");
+//     return getData(2);
+//   })
+//   .then((res)=>{
+//     return getData(3);
+//   })
+//   .then((res)=>{
+//     console.log(res);
+//   })
+// const getPromise = ()=> {
+//   return new Promise((resolve,reject)=>{
+//     console.log("i am promise");
+//     // resolve()
+//     reject("error");
+// } );
+// };
+// let promise = getPromise();
+// // promise.then((res)=>{})
+// promise.catch((err) =>{
+//   console.log("promise remove",err);
+// })
+
+// function asyncFunc1(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       console.log("some data1");
+//       resolve("success");
+//     },4000)
+//   });
+// }
+// console.log("fetching data1");
+// //let p1=asyncFunc1();
+// asyncFunc1().then((res)=>{
+//   // console.log(res);
+//   console.log("fetching data2");
+//   //let p2=asyncFunc2();
+//   asyncFunc2().then((res)=>{});
+//     // console.log(res);
+    
+// });
+
+
+
+// function asyncFunc2(){
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       console.log("some data2");
+//       resolve("success");
+//     },4000)
+//   });
+// }
+
+
+//ayncs await
+// async function getweatherData (){
+//   await api();
+// }
+// function api(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log("weather data");
+//       resolve("success");
+//     },2000);
+//   })
+// }
+
+//ASYNC AWAIT
+// function getData(dataId,getNextData){
+//   return new Promise((resolve,reject)=>{
+//      setTimeout(()=>{
+//     console.log("data",dataId);
+//     resolve("success");
+//     if (getNextData){
+//       getNextData();
+  
+
+//     }
+//   },2000);
+// });
+// }
+
+// async function getAllData(){
+//   await getData(1);
+//   await getData(2);
+// }
+// (async function (){
+//   await getData(1);
+//   await getData(2);
+// })();
