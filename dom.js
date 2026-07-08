@@ -62,24 +62,43 @@
 // }
 
 // greet("Annamikya",role,);
-function checkStudentResult(marks, callback) {
-  if (marks < 70) {
-    callback("Fail");
-  } else {
-    callback("Pass");
-  }
-}
+// function checkStudentResult(marks, callback) {
+//   if (marks < 70) {
+//     callback("Fail");
+//   } else {
+//     callback("Pass");
+//   }
+// }
 
-checkStudentResult(65, function (result) {
-  console.log(`Student result: ${result}`);
-});
+// checkStudentResult(65, function (result) {
+//   console.log(`Student result: ${result}`);
+// });
 
-checkStudentResult(85, function (result) {
-  console.log(`Student result: ${result}`);
-});
-checkStudentResult(77,function(result){
-  console.log( `Student result: ${result}`)
-});
+// checkStudentResult(85, function (result) {
+//   console.log(`Student result: ${result}`);
+// });
+// checkStudentResult(77,function(result){
+//   console.log( `Student result: ${result}`)
+// });
+// setTimeout(()=>{
+//   console.log("Timer Activated.....");
+// },5000);
+// setTimeout(()=>{
+//   console.log("Timer Deactivated.....");
+// },2000);
+setTimeout(()=>{
+  console.log("Step 1: Task uncomplete....");
+  setTimeout(()=>{
+    console.log("Step 2: Task uncomplete.....");
+    setTimeout(()=>{
+      console.log("Step 3: Task uncomplete.....");
+      setTimeout(()=>{
+        console.log("Step 4: Task uncomplete.....");
+      },9000)
+    },6000)
+  },3000)
+},1000);
+
 
  
 
