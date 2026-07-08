@@ -7,10 +7,79 @@
 // let element3= document.getElementById("box3").style.backgroundColor="green";
 
 // console.log(element);
-let heading = document.getElementById("heading");
+// let heading = document.getElementById("heading");
 
-    let paragraph = document.createElement("p");
-    paragraph.innerText = heading.innerText
-    paragraph.style.backgroundColor = "purple";
+//     let paragraph = document.createElement("p");
+//     paragraph.innerText = heading.innerText
+//     paragraph.style.backgroundColor = "yellow";
 
-    heading.parentNode.replaceChild(paragraph, heading);
+//     heading.parentNode.replaceChild(paragraph, heading);
+// let value = document.getElementById("head").getAttribute("id");
+// console.log(value);
+// let setAttribute = document.getElementById("head").setAttribute("class","newclass");
+//  let setAttribute = document.getElementById("head").setAttribute("id","newid");
+// let deleteAttribute = document.getElementById("head").remove();
+// let newHeading = document.createElement("h1");
+// newHeading.innerText="New Heading 1";
+// document.body.appendChild(newHeading);
+// let newimg = document.createElement("img")
+// newimg.src="https://encrypted-tbn0.gstatic.com/es?q=tbn:ANd9GcQAPf_062JKWOBQr9rKxfyjLtlwzCn6Wwx_fJ6vQDIAgQ&s=10"
+// document.body.appendChild(newimg).style.height="200px";
+// document.body.appendChild(newimg).style.width="200px";
+// document.body.appendChild(newimg).style.border="2px solid";
+// let count = 0;
+//     const counterElement = document.getElementById('counter');
+//     function increment() {
+//       count++;
+//       updateDisplay();
+//     }
+//     function decrement() {
+//       count--;
+//       updateDisplay();
+//     }
+
+//     function reset(){
+//       count = 0;
+//       updateDisplay();
+//     }
+//     function updateDisplay() {
+//       counterElement.innerText = count;
+//       if (count > 0) {
+//         counterElement.style.color = "#52c41a"; 
+//       } else if (count < 0) {
+//         counterElement.style.color = "#ff4d4f"; 
+//       } else {
+//         counterElement.style.color = "#333";
+//       }
+//     }
+// function greet(name,callback) {
+//   console.log(`I am ${name}`);
+//   callback();
+// }
+
+// function role(){
+//   console.log("I am a student");
+// }
+
+// greet("Annamikya",role,);
+function checkStudentResult(marks, callback) {
+  if (marks < 70) {
+    callback("Fail");
+  } else {
+    callback("Pass");
+  }
+}
+
+checkStudentResult(65, function (result) {
+  console.log(`Student result: ${result}`);
+});
+
+checkStudentResult(85, function (result) {
+  console.log(`Student result: ${result}`);
+});
+checkStudentResult(77,function(result){
+  console.log( `Student result: ${result}`)
+});
+
+ 
+
