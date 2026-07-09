@@ -348,16 +348,16 @@
 
 // check(6).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("finalize....."));
 
-function transaction(withdrawl){
+function transaction(withdrawl,balance){
     return new Promise((resolve,reject)=>{
-        if(withdrawl<=100000){
+        if(withdrawl<=balance){
             resolve("successfull");
         }
         else{
-            reject("rejected");
+            reject("insufficient balance");
         }
     })
 
 }
 
-transaction(5000).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("finalize....."));
+transaction(5000000,900000000).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("transaction completed....."));
