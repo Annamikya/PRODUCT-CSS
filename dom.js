@@ -319,3 +319,45 @@
 //   await getData(1);
 //   await getData(2);
 // })();
+
+
+// let myPromise = new Promise((resolve,reject)=>{
+//     resolve("promise resolved....");
+//     else{
+//         reject("promise rejected...");
+//     }
+// })
+
+// myPromise.then((mess)=>{console.log(mess)})
+// .catch((err)=>){
+//     console.log(err);
+
+// }
+
+// function check(num){
+//     return new Promise((resolve,reject)=>{
+//         if(num%2===0){
+//             resolve("number is even");
+//         }
+//         else{
+//             reject("number is odd");
+//         }
+//     })
+
+// }
+
+// check(6).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("finalize....."));
+
+function transaction(withdrawl){
+    return new Promise((resolve,reject)=>{
+        if(withdrawl<=100000){
+            resolve("successfull");
+        }
+        else{
+            reject("rejected");
+        }
+    })
+
+}
+
+transaction(5000).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("finalize....."));
