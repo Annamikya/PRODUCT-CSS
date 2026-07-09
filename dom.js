@@ -348,16 +348,47 @@
 
 // check(6).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("finalize....."));
 
-function transaction(withdrawl,balance){
-    return new Promise((resolve,reject)=>{
-        if(withdrawl<=balance){
-            resolve("successfull");
-        }
-        else{
-            reject("insufficient balance");
-        }
-    })
+// function transaction(withdrawl,balance){
+//     return new Promise((resolve,reject)=>{
+//         if(withdrawl<=balance){
+//             resolve("successfull");
+//         }
+//         else{
+//             reject("insufficient balance");
+//         }
+//     })
 
-}
+// }
 
-transaction(5000000,900000000).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("transaction completed....."));
+// transaction(5000000,900000000).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("transaction completed....."));
+
+
+// function marks(marks){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             if(marks>=70){
+//                 resolve("pass");
+//             }
+//             else{
+//                 reject("fail");
+//             }
+//         },2000);
+//     });
+
+// };
+
+// marks(78).then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log("result declared"));
+
+//FETCH API
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then((res)=>res.json()).then(data=>console.log(data)).catch(err=>console.log(err));
+
+// async function hello(){
+//     return "hello i am a student....";
+// }
+// hello().then(res=>console.log(res)).catch(err=>console.log(err));
+
+// async function sum(a,b){
+//     return a+b;
+// }
+// sum(3,4).then(res=>console.log(res)).catch(err=>console.log(err));
